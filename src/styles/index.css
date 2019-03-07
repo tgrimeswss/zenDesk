@@ -1,0 +1,179 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.flexDisplay {
+    display: flex;
+    flex-direction: row;
+}
+
+.borderSlightRound {
+    border: solid #c6c6c6 1px;
+    border-radius: 5px;
+}
+
+.bottomBorder {
+    border-bottom: solid #c6c6c6 1px;
+}
+
+.hoverOver:hover {
+    background-color:#f2f7ff;
+}
+
+.leftBorder {
+    border-left: solid #c6c6c6 1px;
+}
+
+.noPadding {
+    padding: 0px;
+}
+
+.navItemSelected {
+    font-weight: bold;
+    border-bottom: solid red 2px;
+}
+
+@media (min-width: 576px){
+    .container {
+        max-width:2000px;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+        max-width:2000px;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+        max-width:2000px;
+    }
+}
+
+.container {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.invoiceContainer {
+    background-color: #f9f9f9;
+}
+
+.bm-menu-wrap {
+    width:20%;
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+.grow:focus {
+    transform: scale(1.2);
+    outline: 0;
+}
+
+.fullWidth {
+    width:100%;
+}
+
+.headerBackground {
+    background-color: #f9f9f9;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #000000; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+.font-10 {
+    font-size: 10px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.centeredText {
+    text-align: center;
+}
+
+.lastItemRight div:last-child {
+    margin-left:auto;
+}
+
+.padding-10 {
+    padding:10px;
+}
+
+.padding-20 {
+    padding:20px;
+}
+
+.padding-40 {
+    padding:40px;
+}
+
+.padding-sides-20 {
+    padding: 0px 20px;
+}
+
+.padding-sides-40 {
+    padding: 0px 40px;
+}
+
+.blueFont {
+    color:#4ca2ff;
+}
+
+.linkStyles:hover {
+    color: #4286f4;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.scroll {
+    overflow-y: hidden;
+}
+
+.navContainer {
+    background-color: #2bb4ff;
+}
+
+.whiteFont {
+    color:white;
+}
+
+.fixed {
+    position:fixed;
+}
