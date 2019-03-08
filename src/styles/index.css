@@ -143,6 +143,28 @@ background: #555;
     font-size: 20px;
 }
 
+.suggestion {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.react-autosuggest__input {
+    padding:10px;
+    width:100%;
+    border-radius: 5px;
+    border: solid black 1px;
+    outline: none;
+}
+
+.react-autosuggest__input:focus {
+    background-color: #1F7A3C;
+    color: white;
+}
+
+.react-autosuggest__input:focus::placeholder {
+    color: white;
+}
+
 .centeredText {
     text-align: center;
 }
