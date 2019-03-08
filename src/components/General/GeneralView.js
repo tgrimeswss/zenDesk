@@ -1,9 +1,9 @@
 import React,{Component} from 'react'
-import {Row,Col,DropdownButton,ButtonGroup,Dropdown,Modal,Button} from 'react-bootstrap'
+import {Row,Col,Modal,Button} from 'react-bootstrap'
 import {connect} from 'react-redux'
 import TableComponent from '../Modules/TableComponent'
 import Loading from '../Modules/Loading'
-import InvoiceItem from './InvoiceItem'
+// import InvoiceItem from './InvoiceItem'
 
 
 
@@ -37,7 +37,7 @@ class GeneralView extends Component {
             let shippingSection = ['billTo','shipTo','deliveryNotes','orderNotes', 'lastOrder']
             return (
                 <Row>
-                    <Col sm={12} md={2} className="d-block d-md-none">
+                    {/* <Col sm={12} md={2} className="d-block d-md-none">
                         <div className="padding-10">
                             <DropdownButton className="fullWidth" as={ButtonGroup} title="Invoices" id="bg-vertical-dropdown-1">
                                 {generalData.invoices.map((invoice,i)=>(
@@ -45,18 +45,18 @@ class GeneralView extends Component {
                                 ))}
                             </DropdownButton>
                         </div>
-                    </Col>
-                    <Col sm={12} md={5}><TableComponent data={generalData&&generalData.general} header="General Information" subType="general" arrayType={generalSection}/></Col>
+                    </Col> */}
+                    <Col sm={12} md={6}><TableComponent data={generalData&&generalData.general} header="General Information" subType="general" arrayType={generalSection}/></Col>
                     <Col className="d-md-none d-lg-none" style={{height:40}}></Col>
-                    <Col sm={12} md={5}><TableComponent data={generalData&&generalData.general} subType="general" header="Shipping-Billing Information" arrayType={shippingSection}/></Col>
-                    <Col sm={12} md={2} className="d-none d-md-block noPadding">
+                    <Col sm={12} md={6}><TableComponent data={generalData&&generalData.general} subType="general" header="Shipping-Billing Information" arrayType={shippingSection}/></Col>
+                    {/* <Col sm={12} md={2} className="d-none d-md-block noPadding">
                         <div className="invoiceContainer leftBorder" ref="invoices">
                             <h4 className="centeredText padding-10">Invoices</h4>
                             {generalData.invoices.map((invoice,i)=>(
                                 <InvoiceItem onClicker={()=>this.setState({modalOpen:true,invoice})} key={i} invoice={invoice} i={i}/>
                             ))}
                         </div>
-                    </Col>
+                    </Col> */}
                     <Modal onHide={()=>this.setState({modalOpen:false})} size="lg" show={modalOpen}>
                         <Modal.Header>
                             <Modal.Title>Invoice #{invoice.invoiceNum}</Modal.Title>

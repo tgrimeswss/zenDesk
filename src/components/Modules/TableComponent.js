@@ -4,13 +4,18 @@ import {data2Render} from '../../helpers'
 import {connect} from 'react-redux'
 
 
+
+
 class TableComponent extends Component {
 
     state={open:false,content:false}
 
     
     getItem=(data,item)=>{
-        if(data&&data[item]){
+        const {customComponents} = this.props
+        if(customComponents&&customComponents.length>0&&customComponents.findIndex(e=>e.name===item)>-1){
+            return customComponents[customComponents.findIndex(e=>e.name===item)].component
+        } else if(data&&data[item]){
             const elem = data[item]
             if(typeof(elem)==='object'){
                 return (
@@ -25,24 +30,26 @@ class TableComponent extends Component {
     }
 
     render(){
-        const {arrayType,header,data} = this.props
+        const {arrayType,header,data,noHeader} = this.props
         const {open,content} = this.state
         return (
             <div>
                 <Collapse in={data!==undefined}>
                     <div className="padding-10">
-                        <h4 className="centeredText padding-10">{header}</h4>
                         {data!==undefined&&(
                             <Table bordered>
                                 <tbody>
+                                    {!noHeader&&<tr className="tableHeader"><td colSpan="2"><h4 className="centeredText padding-10">{header}</h4></td></tr>}
                                     {arrayType.map((item,i)=>{
                                         return (
                                             <tr key={i}>
                                                 <td className="headerBackground">
                                                     <strong>{data2Render[item]}</strong>
-                                                    <OverlayTrigger key={i} placement="top" overlay={<Tooltip>Edit {data2Render[item]}</Tooltip>}>
-                                                        <i onClick={()=>this.setState({open:true,content:item})} className="fas fa-edit font-10 padding-10 blueFont pointer grow"></i>
-                                                    </OverlayTrigger>
+                                                    {false&&(
+                                                        <OverlayTrigger key={i} placement="top" overlay={<Tooltip>Edit {data2Render[item]}</Tooltip>}>
+                                                            <i onClick={()=>this.setState({open:true,content:item})} className="fas fa-utensils font-10 padding-10 greenFont pointer grow"></i>
+                                                        </OverlayTrigger>
+                                                    )}
                                                 </td>
                                                 {this.getItem(data,item)}
                                             </tr>

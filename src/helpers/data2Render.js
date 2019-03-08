@@ -18,7 +18,7 @@ export const data2Render = {
     lastOrder:'Last order',
     routeNumbers:'Route Numbers',
     noDeliveryDays:'No Delivery Days',
-    stopNumber:'Stop Number',
+    stopNumbers:'Stop Numbers',
     transportationdeliveryNotes:'Delivery Notes',
     avgDeliveryTime:'Avg Delivery Time',
     deliveryWindow:'Delivery Window',

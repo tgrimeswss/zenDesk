@@ -12,12 +12,12 @@ class Header extends Component {
         return (
             <Row className="fullWidth">
                 <Collapse in={path!==''}>
-                    <Col xs={12} className="headerBackground bottomBorder">
+                    <Col xs={12} className="header bottomBorder">
                         <br/>
                         <div className="padding-sides-20 flexDisplay">
-                            <h3>Organization:</h3>
+                            <h3>Account:</h3>
                             <div style={{width:10}}></div>
-                            <h3><strong>{generalData&&generalData.general.accountName}</strong></h3>
+                            <h3><strong className="linkStyles"><a href="/#">{generalData&&generalData.general.accountName}</a></strong></h3>
                         </div>
                         <Collapse in={path!==''}>
                             <div className="padding-sides-40">

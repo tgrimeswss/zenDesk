@@ -5,6 +5,8 @@ import DropdownComponent from '../Modules/DropdownComponent'
 
 
 
+
+
 class AccountingView extends Component {
     render(){
         const internalAccountArr = ['name','title','phone','email','contactNotes','remarksSections']
@@ -12,9 +14,9 @@ class AccountingView extends Component {
         if(generalData){
             return (
                 <div>
-                    <div className="padding-20"><DropdownComponent header1="Internal Accouting Contact: " header2={generalData.accounting.internalAccountingContact.name} content={<TableComponent data={generalData.accounting.internalAccountingContact} subType="accounting" arrayType={internalAccountArr}/>}/></div>
+                    <div className="padding-20"><DropdownComponent header1="Internal Accouting Contact: " header2={generalData.accounting.internalAccountingContact.name} content={<TableComponent noHeader data={generalData.accounting.internalAccountingContact} subType="accounting" arrayType={internalAccountArr}/>}/></div>
                     {generalData.accounting.ownershipContacts.map((contact,i)=>(
-                        <div key={i} className="padding-20"><DropdownComponent header1="Ownership contact:" header2={contact.name} content={<TableComponent data={contact} subType="accounting" arrayType={internalAccountArr}/>}/></div>
+                        <div key={i} className="padding-20"><DropdownComponent header1="Ownership contact:" header2={contact.name} content={<TableComponent noHeader data={contact} subType="accounting" arrayType={internalAccountArr}/>}/></div>
                     ))}
                 </div>
             )

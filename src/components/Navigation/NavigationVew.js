@@ -18,7 +18,7 @@ class NavigationView extends Component {
                     <div className="flexDisplay navContainer whiteFont">
                         {this.tabs.map((tab,i)=>(
                             <div key={i} className={`fullWidth centeredText padding-10 ${path===tab.toLowerCase()&&'navItemSelected'}`}>
-                                <div onClick={()=>history.push(`/${tab.toLowerCase()}`)} className={`grow pointer`}>{tab}</div>
+                                <div onClick={()=>history.push(`/${tab.toLowerCase()}`)} className={`grow pointer navContainer`}>{tab}</div>
                             </div>
                         ))}
                     </div>
