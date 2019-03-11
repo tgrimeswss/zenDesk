@@ -30,10 +30,10 @@ class TableComponent extends Component {
     }
 
     render(){
-        const {arrayType,header,data,noHeader} = this.props
+        const {arrayType,header,data,noHeader,className} = this.props
         const {open,content} = this.state
         return (
-            <div>
+            <div className={className}>
                 <Collapse in={data!==undefined}>
                     <div className="padding-10">
                         {data!==undefined&&(

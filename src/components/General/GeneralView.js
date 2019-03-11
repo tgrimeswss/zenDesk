@@ -46,9 +46,9 @@ class GeneralView extends Component {
                             </DropdownButton>
                         </div>
                     </Col> */}
-                    <Col sm={12} md={6}><TableComponent data={generalData&&generalData.general} header="General Information" subType="general" arrayType={generalSection}/></Col>
+                    <Col sm={12} md={12} lg={6}><TableComponent data={generalData&&generalData.general} header="General Information" subType="general" arrayType={generalSection}/></Col>
                     <Col className="d-md-none d-lg-none" style={{height:40}}></Col>
-                    <Col sm={12} md={6}><TableComponent data={generalData&&generalData.general} subType="general" header="Shipping-Billing Information" arrayType={shippingSection}/></Col>
+                    <Col sm={12} md={12} lg={6}><TableComponent data={generalData&&generalData.general} subType="general" header="Shipping-Billing Information" arrayType={shippingSection}/></Col>
                     {/* <Col sm={12} md={2} className="d-none d-md-block noPadding">
                         <div className="invoiceContainer leftBorder" ref="invoices">
                             <h4 className="centeredText padding-10">Invoices</h4>

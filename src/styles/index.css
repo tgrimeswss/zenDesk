@@ -62,11 +62,20 @@ a:hover {
     .container {
         max-width:2000px;
     }
+    
 }
 
 @media (min-width: 992px){
     .container {
         max-width:2000px;
+    }
+    
+    .padding-40R {
+        padding: 40px 10px 40px 40px;
+    }
+    
+    .padding-40L {
+        padding: 40px 40px 40px 10px;
     }
 }
 
